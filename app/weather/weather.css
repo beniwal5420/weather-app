@@ -1,0 +1,110 @@
+/* Container */
+.weather-container {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 80px auto;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.weather-container:hover {
+    transform: translateY(-10px);
+}
+
+/* Search Bar */
+.search-bar {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Search Input */
+.search-input {
+    width: 70%;
+    padding: 18px 30px;
+    border: 2px solid #74b9ff; /* Border color */
+    border-radius: 30px;
+    font-size: 20px;
+    outline: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.search-input::placeholder {
+    color: #b2bec3;
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* Search Input Focus */
+.search-input:focus {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: #0984e3; /* Focused border color */
+}
+
+/* Search Button */
+.search-button {
+    background: #d63031;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-button:hover {
+    background: #ff7675;
+}
+
+.search-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Weather Info */
+.weather-info {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.weather-info h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.weather-info p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Error Styling */
+.error {
+    color: #ff6b6b;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+/* Loading Styling */
+.loading {
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+}
