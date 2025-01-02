@@ -2,7 +2,7 @@ import { NextResponse, NextRequest } from 'next/server';
 import axios from 'axios';
 
 const http = axios.create({
-    baseURL: 'https://api.openweathermap.org/data/2.5/weather'
+    baseURL: process.env.WEATHER_API_URL,
 });
 
 export async function GET(req: NextRequest) {
@@ -11,11 +11,10 @@ export async function GET(req: NextRequest) {
     const long = req.nextUrl.searchParams.get("long");
     const country = req.nextUrl.searchParams.get("country");
     const units = req.nextUrl.searchParams.get("units");
-    const apikey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 
     // Initialize params for the request
     const query: Record<string, string> = {
-        appid: apikey,
+        appid: process.env.WEATHER_API_KEY,
         units: 'metric'  // Default units to metric
     };
 
